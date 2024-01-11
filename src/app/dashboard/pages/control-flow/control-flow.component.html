@@ -1,1 +1,12 @@
-<p>control-flow works!</p>
+<section class="grid grid-cols-1 md_grid-cols-2 gap-3">
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">if_{{ showContent() }}</h2>
+  </div>
+  <button (click)="onToggle()">click me</button>
+
+  @if (showContent()){
+  <div>hello</div>
+  }@else{
+  <div>bye</div>
+  }
+</section>
