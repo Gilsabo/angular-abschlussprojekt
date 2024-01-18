@@ -46,7 +46,6 @@
         <div class="col-2"></div>
         <div class="col-4">
           <div class="Subtotal">Sub-Total</div>
-          <div><small> 2 items</small></div>
         </div>
         <div class="col-4 text-end">
           <strong> ${{ subTotal }}</strong>
@@ -54,7 +53,9 @@
       </div>
       <div class="row">
         <div class="col-12 text-center">
-          <button class="btn btn-lg btn-success">Make Sale</button>
+          <button class="btn btn-lg btn-success" (click)="makeSale()">
+            Make Sale
+          </button>
         </div>
       </div>
     </div>
