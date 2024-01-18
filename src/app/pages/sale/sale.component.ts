@@ -9,6 +9,19 @@ import { ProductService } from '../../services/product.service';
 export class SaleComponent implements OnInit {
   cartProducts: any[] = [];
   subTotal: number = 0;
+  saleObj: any = {
+    SaleId: 0,
+    CustId: 1,
+    SaleDate: new Date(),
+    TotalInvoiceAmount: 0,
+    Discount: 0,
+    PaymentNaration: 'Patmm ',
+    DeliveryAddress1: 'Sturztgasse ',
+    DeliveryAddress2: 'Maria Hilfer',
+    DeliveryCity: 'Wiwn',
+    DeliveryPinCode: '1090',
+    DeliveryLandMark: 'ATM',
+  };
   constructor(private productService: ProductService) {}
   ngOnInit(): void {
     this.loadCart();
@@ -26,6 +39,17 @@ export class SaleComponent implements OnInit {
   RemoveItem(id: number) {
     this.productService.removeCartItemById(id).subscribe((res: any) => {
       if (res.result) {
+        this.loadCart();
+        this.productService.cartAddedSubject.next(true);
+      }
+    });
+  }
+  makeSale() {
+    this.saleObj.TotalInvoiceAmount = this.subTotal;
+    this.productService.cartAddedSubject.next(true);
+    this.productService.makeSale(this.saleObj).subscribe((res: any) => {
+      if (res.result) {
+        alert('Sale Success');
         this.loadCart();
         this.productService.cartAddedSubject.next(true);
       }
