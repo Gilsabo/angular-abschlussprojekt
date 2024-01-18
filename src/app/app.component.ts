@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from './services/product.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { ProductService } from './services/product.service';
 export class AppComponent implements OnInit {
   title = 'angular-abschlussprojekt';
   cartProducts: any[] = [];
-  constructor(private productService: ProductService) {
+  subTotal: number = 0;
+  constructor(private productService: ProductService, private router: Router) {
     this.productService.cartAddedSubject.subscribe((res) => {
       this.loadCart();
     });
@@ -18,9 +20,15 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.loadCart();
   }
+  redirectToSale() {
+    this.router.navigateByUrl('/sale');
+  }
   loadCart() {
     this.productService.getCartItemsByCustId(1).subscribe((res: any) => {
       this.cartProducts = res.data;
+      this.cartProducts.forEach((element) => {
+        this.subTotal = this.subTotal + element.productPrice;
+      });
     });
   }
 }
