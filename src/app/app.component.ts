@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
     this.router.navigateByUrl('/sale');
   }
   loadCart() {
+    this.subTotal = 0;
     this.productService.getCartItemsByCustId(1).subscribe((res: any) => {
       this.cartProducts = res.data;
       this.cartProducts.forEach((element) => {
