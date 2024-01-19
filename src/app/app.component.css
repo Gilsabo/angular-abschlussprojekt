@@ -23,3 +23,6 @@ a:hover {
 .img-fluid {
   height: 300px !important;
 }
+.CartContainer {
+  width: 20rem;
+}
