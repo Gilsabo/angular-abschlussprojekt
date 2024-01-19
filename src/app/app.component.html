@@ -6,7 +6,7 @@
     <div class="container">
       <a class="navbar-brand fs-2 fw-bold" href="/"
         ><i class="fa fa-cart-shopping fs-2" style="color: #f54242"></i
-        ><span class="textBlur">Gilis Elctro Shop</span></a
+        ><span class="textBlur">Gilis Electro Shop</span></a
       >
       <button
         class="navbar-toggler"
@@ -22,7 +22,7 @@
       </button>
       <!-- Nav Items -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ml-3">
+        <div class="navbar-nav ms-6 mb-2 mb-lg-0 text-center ml-3">
           <div class="nav-item dropdown">
             <a
               class="nav-link fw-semibold text-uppercase me-1 text-danger"
@@ -36,12 +36,8 @@
             class="nav-item dropdown fw-semibold text-uppercase text-black me-1"
           >
             <a
-              class="nav-link dropdown-toggle fw-semibold text-uppercase text-black me-1"
+              class="nav-link fw-semibold text-uppercase text-black me-1"
               href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
             >
               blog
             </a>
@@ -67,13 +63,12 @@
                 class="position-absolute translate-middle badge rounded-pill bg-danger"
               >
                 {{ cartProducts.length }}
-                <span class="visually-hidden">unread messages</span>
               </span>
             </a>
             <div class="dropdown-menu">
               <div class="CartContainer p-4">
                 <div class="row">
-                  <div class="col-6">Your Cart</div>
+                  <div class="col-6 mb-2">Your Cart</div>
                 </div>
                 <div class="row pt-1" *ngFor="let cart of cartProducts">
                   <div class="col-4">
@@ -84,14 +79,15 @@
                       class="card-img-top"
                     />
                   </div>
-                  <div class="col-3">
-                    {{ cart.productName }}
-                  </div>
+
                   <div class="col-2">
                     {{ cart.quantity + 1 }}
                   </div>
                   <div class="col-2 text-end">
                     {{ cart.productPrice }}
+                  </div>
+                  <div class="col-12 mb-3">
+                    {{ cart.productName }}
                   </div>
                 </div>
 
