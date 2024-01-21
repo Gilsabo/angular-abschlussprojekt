@@ -35,7 +35,6 @@ export class ProductService {
   }
 
   makeSale(obj: any): Observable<any> {
-    debugger;
     return this.http.post<any>(
       'http://onlinetestapi.gerasim.in/api/Ecomm/AddNewSale',
       obj
