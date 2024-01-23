@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Product</label>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="text"
+      id="title"
+      placeholder="Introduce the title"
+    />
+  </div>
+
+  <div>
+    <label for="content">Rating</label>
+
+    <input
+      type="text"
+      name="content"
+      [(ngModel)]="content"
+      id="content"
+      placeholder="Write valoration"
+    />
+  </div>
+  <button type="submit" v class="btn btn-sm btn-success">add blog</button>
+</form>
