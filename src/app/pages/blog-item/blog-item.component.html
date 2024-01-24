@@ -1,8 +1,9 @@
-<div>
+<div class="mt-3">
   <h3>
     {{ blog.title }}
   </h3>
-  <p>{{ blog.content }}</p>
-  <p>{{ blog.created_at }}</p>
-  <div (click)="onDelete(blog)">x</div>
+  <p class="mb-0">{{ blog.content }}</p>
+  <p class="text-sm">{{ blog.created_at }}</p>
+
+  <button class="btn btn-sm btn-danger mb-4" (click)="onDelete(blog)">x</button>
 </div>
