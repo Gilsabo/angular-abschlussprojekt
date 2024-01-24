@@ -28,7 +28,7 @@ export class AddBlogComponent implements OnInit {
 
       content: this.content,
 
-      created_at: newDate.toString(),
+      created_at: newDate.toLocaleDateString(),
     };
 
     this.onAddBlog.emit(newBlog);
