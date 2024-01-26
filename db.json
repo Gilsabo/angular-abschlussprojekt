@@ -1,3 +1,16 @@
 {
-  "blogs": []
+  "blogs": [
+    {
+      "id": "72b2",
+      "title": "Xiaomi 12",
+      "content": "\nI recently got my hands on the Xiaomi 12 Note, and I must say, it has exceeded my expectations. The design is sleek and feels premium in hand, and the display is absolutely stunning, making video streaming and gaming a joy. Performance-wise, it's a powerhouse – the Snapdragon processor ensures smooth multitasking and gaming, and the 5G connectivity is a noticeable upgrade. The camera system is versatile, capturing detailed and vibrant shots. The battery life has been impressive, easily lasting me through a full day of use. Overall, the Xiaomi 12 Note is a flagship contender that delivers on its promises, offering a fantastic user experience across the board.",
+      "created_at": "24/1/2024"
+    },
+    {
+      "id": "49d4",
+      "title": "Iphone 13",
+      "content": "\nHaving recently upgraded to the latest iPhone, I am thoroughly impressed with the overall experience. The design is the epitome of elegance, with the premium build quality and attention to detail that Apple is known for. The display, boasting the signature Retina technology, is crisp, vibrant, and a joy to interact with. Performance-wise, the latest iPhone handles every task effortlessly, thanks to its powerful chip. The camera system continues to set the bar high for mobile photography, consistently capturing stunning photos in various conditions. The integration of iOS is seamless, and the ecosystem with other Apple devices enhances the overall user experience. With excellent battery life and a host of features, the latest iPhone reaffirms why Apple remains at the forefront of the smartphone industry.",
+      "created_at": "24/1/2024"
+    }
+  ]
 }
